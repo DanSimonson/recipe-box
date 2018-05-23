@@ -1,6 +1,6 @@
 <template>
     <div class="navbar">
-        <nav class="nav-extended indigo darken-2">
+        <nav class="nav-extended cyan darken-2">
             <div class="nav-content">
                 <router-link :to="{ name: 'Index' }">
                     <span class="nav-title">Recipes </span>
