@@ -32,7 +32,7 @@
     import slugify from 'slugify'
 
     export default {
-        name: "AddRecipe ",
+        name: "AddRecipe",
         another: '',
         data() {
             return {
@@ -43,6 +43,7 @@
                 slug: null
             }
         },
+
         methods: {
             addRecipe() {
                 //console.log(this.title, this.ingredients)

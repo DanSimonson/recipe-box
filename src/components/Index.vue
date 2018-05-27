@@ -28,6 +28,15 @@
         recipes: []
       }
     },
+    watch: {
+      recipes: {
+        handler() {
+          console.log('Todos changed!');
+          localStorage.setItem('recipes', JSON.stringify(this.recipes));
+        },
+        deep: true,
+      },
+    },
     methods: {
       deleteRecipe(id) {
         this.recipes = this.recipes.filter(recipe => {
@@ -37,7 +46,6 @@
       }
     },
     created() {
-      // fetch data from the firstore
       // fetch data from firestore
       db.collection('recipes').get()
         .then(snapshot => {
@@ -48,7 +56,7 @@
             this.recipes.push(recipe)
           })
         })
-    }
+    },
   }
 </script>
 
